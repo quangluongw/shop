@@ -27,9 +27,9 @@ const Header: React.FC = () => {
             </div>
 
 
-            <header className=" flex items-center justify-between px-4 py-3 ">
+            <header className=" flex items-center justify-between px-10 py-8 ">
 
-                <div className="logo text-xl font-bold">Exclusive</div>
+                <div className="logo text-2xl font-bold">Exclusive</div>
 
 
                 <nav className="hidden lg:flex items-center gap-6">
