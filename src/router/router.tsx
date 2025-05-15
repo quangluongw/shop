@@ -13,6 +13,6 @@ export const router = createBrowserRouter([
         }]
     }
 ])
-// export const Router: React.FC = () => {
-//     return <RouterProvider router={router} />;
-// };
+export const Router: React.FC = () => {
+    return <RouterProvider router={router} />;
+};
