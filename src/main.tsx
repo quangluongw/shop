@@ -1,6 +1,6 @@
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { Router } from './router/router'
-createRoot(document.getElementById('root')!).render(
-  <Router />
-)
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import App from "./App";
+createRoot(document.getElementById("root")!).render(
+  <App />
+);
