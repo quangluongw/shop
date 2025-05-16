@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 
-const Layoutcline = () => {
+const LayoutClient = () => {
     return (
         <div>
             <Outlet />
@@ -8,4 +8,4 @@ const Layoutcline = () => {
     );
 };
 
-export default Layoutcline;
+export default LayoutClient;

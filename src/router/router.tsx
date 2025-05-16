@@ -2,17 +2,17 @@ import {
     RouterProvider,
     createBrowserRouter,
 } from "react-router-dom";
-import Layoutcline from "../layout/layoutcline";
-import Home from "../pages/Home";
+import LayoutClient from "../layout/LayoutClient";
+import Login from "../pages/client/Login";
 export const router = createBrowserRouter([
     {
         path: '/',
-        element: <Layoutcline />,
-        children: [{
-            index: true, element: <Home />
-        }]
+        element: <LayoutClient />,
+        children: [
+            {path: "/login", element: <Login />}
+        ]
     }
 ])
-// export const Router: React.FC = () => {
-//     return <RouterProvider router={router} />;
-// };
+export const Router: React.FC = () => {
+    return <RouterProvider router={router} />;
+};
