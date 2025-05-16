@@ -3,13 +3,13 @@ import {
     createBrowserRouter,
 } from "react-router-dom";
 import LayoutClient from "../layout/layoutClient";
-import Login from "../pages/client/Login";
+import Signup from "../pages/client/Signup";
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <LayoutClient />,
         children: [
-            {path: "/login", element: <Login />}
+            {path: "/signup", element: <Signup />}
         ]
     }
 ])
