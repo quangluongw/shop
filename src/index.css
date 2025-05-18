@@ -2,7 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 li {
   list-style: none;
 }
@@ -59,9 +63,10 @@ header {
 footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-
+  
   font-family: "Poppins", sans-serif;
+  margin: auto;
+  max-width: 1280px;
 }
 
 footer .div1,
@@ -70,7 +75,7 @@ footer .div1,
 .div4,
 .div5 {
   width: 100%;
-  height: 400px;
+  /* height: 400px; */
   display: block;
   align-items: center;
   gap: 10px;
@@ -88,7 +93,22 @@ footer .div1,
 footer .div1 .logoFooter {
   margin-top: 20px;
 }
-
+@media (max-width: 1018px) {
+  footer{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  footer{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  footer{
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
+}
 .submit {
   margin-top: -3px;
   color: rgb(79, 78, 78);
