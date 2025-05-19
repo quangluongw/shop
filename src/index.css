@@ -31,13 +31,13 @@ li {
   justify-content: center;
 }
 
-.title-header li,
+/* .title-header li,
 button {
   list-style: none;
   color: white;
   font-family: "Poppins", sans-serif;
   margin-top: 10px
-}
+} */
 
 
 .change-lg {
@@ -56,15 +56,12 @@ header {
   font-family: "Poppins", sans-serif;
 }
 
-.logo {
-  margin-left: 20px;
-}
+
 
 footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  
-  font-family: "Poppins", sans-serif;
+    font-family: "Poppins", sans-serif;
   margin: auto;
   max-width: 1280px;
 }
@@ -112,4 +109,42 @@ footer .div1 .logoFooter {
 .submit {
   margin-top: -3px;
   color: rgb(79, 78, 78);
+}
+.stepper {
+  display: inline-flex;
+  border-top: 2px solid #dededf;
+  border-bottom: 2px solid #dededf;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  /* width: 80px; */
+  /* height: 27px; */
+  padding: 3px 0;
+}
+.stepper input {
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  /* font-weight: bold; */
+  outline: none;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  background: white;
+}
+.buttons button {
+  border: none;
+  width: 30px;
+  /* height: 10px; */
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  background: transparent;
+  color: #333;
+}
+.buttons button:focus {
+  outline: none;
+}
+.buttons button:hover {
+  background: #eee;
 }

@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="bg-black">
         <footer >
           <div className="div1">
-            <ul className="flex flex-col gap-4 py-5 x py-5 xl:py-20 pl-5 ">
+            <ul className="flex flex-col gap-4 py-5 xl:py-20 pl-5 ">
               <li className=" loloFooter logo text-2xl font-bold">Exclusive</li>
               <li className=" subFooter  logo text-1xl font-bold">Subcribe</li>
               <li className=" logo ">Get 10% first oder</li>

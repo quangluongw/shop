@@ -30,48 +30,51 @@ const Header: React.FC = () => {
           </select>
         </div>
       </div>
+      <div className="border-b-2">
+        <header className=" flex items-center justify-between px-5 py-8 max-w-[1280px] m-auto">
+          <div className="logo text-2xl font-bold">Exclusive</div>
 
-      <header className=" flex items-center justify-between px-10 py-8 max-w-[1280px] m-auto">
-        <div className="logo text-2xl font-bold">Exclusive</div>
-
-        <nav className="hidden lg:flex items-center gap-6">
-          <Link to="#" className="text-[16px] hover:text-gray-600">
-            Home
-          </Link>
-          <Link to="#" className="text-[16px] hover:text-gray-600">
-            Contact
-          </Link>
-          <Link to="#" className="text-[16px] hover:text-gray-600">
-            About
-          </Link>
-          <Link to="#" className="text-[16px] hover:text-gray-600">
-            Sign Up
-          </Link>
-        </nav>
-        <div className="lg:flex items-center gap-8 hidden">
-          <div className="relative">
-            <input
-              type="text"
-              placeholder="Tìm kiếm"
-              className="px-3 py-1.5 bg-gray-100 rounded-md text-sm"
-            />
+          <nav className="hidden lg:flex items-center gap-6">
+            <Link to="/" className="text-[16px] hover:text-gray-600">
+              Home
+            </Link>
+            <Link to="#" className="text-[16px] hover:text-gray-600">
+              Contact
+            </Link>
+            <Link to="#" className="text-[16px] hover:text-gray-600">
+              About
+            </Link>
+            <Link to="#" className="text-[16px] hover:text-gray-600">
+              Sign Up
+            </Link>
+          </nav>
+          <div className="lg:flex items-center gap-8 hidden">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Tìm kiếm"
+                className="px-3 py-1.5 bg-gray-100 rounded-md text-sm"
+              />
+            </div>
+            <div className="flex items-center gap-4 text-xl">
+              <FaRegHeart />
+              <Link to="cart">
+              <FaCartShopping />
+              </Link>
+              <FaRegCircleUser />
+            </div>
           </div>
-          <div className="flex items-center gap-4 text-xl">
-            <FaRegHeart />
-            <FaCartShopping />
-            <FaRegCircleUser />
+          <div className="bg-black text-white lg:hidden flex items-center justify-between px-4 py-2 rounded-md ">
+            <button
+              onClick={() => setIsOpen(!isOpen)}
+              className="text-2xl focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              ☰
+            </button>
           </div>
-        </div>
-        <div className="bg-black lg:hidden flex items-center justify-between px-4 py-2 rounded-md ">
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-2xl focus:outline-none"
-            aria-label="Toggle menu"
-          >
-            ☰
-          </button>
-        </div>
-      </header>
+        </header>
+      </div>
 
       <AnimatePresence>
         {isOpen && (
