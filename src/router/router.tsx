@@ -3,8 +3,8 @@ import {
     createBrowserRouter,
 } from "react-router-dom";
 import Layoutcline from "../layout/layoutcline";
-import Home from "../pages/Home";
-export const router = createBrowserRouter([
+import Home from "../pages/clients/Home";
+export const routes = createBrowserRouter([
     {
         path: '/',
         element: <Layoutcline />,
@@ -13,6 +13,6 @@ export const router = createBrowserRouter([
         }]
     }
 ])
-// export const Router: React.FC = () => {
-//     return <RouterProvider router={router} />;
-// };
+export const Routes: React.FC = () => {
+    return <RouterProvider router={routes} />;
+};
