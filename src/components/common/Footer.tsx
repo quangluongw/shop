@@ -1,10 +1,10 @@
-import qr from "../components/common/img/qr.jpg";
+import qr from "../../components/common/img/qr.jpg";
 import { FaFacebookF, FaInstagram, FaTwitter, FaTiktok } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
       <div className="bg-black">
-        <footer >
+        <footer>
           <div className="div1">
             <ul className="flex flex-col gap-4 py-5 xl:py-20 pl-5 ">
               <li className=" loloFooter logo text-2xl font-bold">Exclusive</li>
@@ -39,7 +39,7 @@ const Footer = () => {
           </div>
           <div className="div2">
             <ul className="flex flex-col gap-4 py-5 xl:py-20 pl-5">
-              <li className=" subFooter  logo text-lg font-bold">Suport</li>
+              <li className="subFooter logo text-lg font-bold">Suport</li>
               <li className="logo">
                 111 Bijoy sarani, Dhaka, DH 1515, Bangladesh.
               </li>
@@ -60,7 +60,7 @@ const Footer = () => {
                 <a href="#"> Cart</a>
               </li>
               <li className="logo">
-                f<a href="#"> Wishlist</a>
+                <a href="#"> Wishlist</a>
               </li>
               <li className="logo">
                 <a href="#">Shop</a>
