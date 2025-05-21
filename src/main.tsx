@@ -1,6 +1,4 @@
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import { Router } from './router/router'
-createRoot(document.getElementById('root')!).render(
-  <Router />
-)
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import RouteProvider from "./providers/router.provider";
+createRoot(document.getElementById("root")!).render(<RouteProvider />);

@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}", // quan trọng với Vite
   ],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        'tablet': '890px',
+  
+        'laptop': '1025px',
+  
+        'desktop': '1280px',
+      }
+    },
   },
   plugins: [],
 };
