@@ -6,7 +6,6 @@ const LayoutClient = () => {
         <div>
             <Header />
             <div className="max-w-[1280px] m-auto px-5 mt-5">
-
             <Outlet />
             </div>
             <Footer />
