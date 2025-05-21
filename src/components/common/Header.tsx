@@ -61,7 +61,9 @@ const Header: React.FC = () => {
               <Link to="cart">
               <FaCartShopping />
               </Link>
-              <FaRegCircleUser />
+              <Link to="/accout">
+              <FaRegCircleUser  />
+              </Link>
             </div>
           </div>
           <div className="bg-black text-white lg:hidden flex items-center justify-between px-4 py-2 rounded-md ">
