@@ -50,3 +50,7 @@
     @apply md:text-2xl;
     @apply lg:text-lg;
 }
+
+.authForm-codeInput{
+    @apply w-12 h-12 text-center text-sm border border-gray-300 rounded;
+}
