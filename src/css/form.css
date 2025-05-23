@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.trans {
+    @apply transition-all duration-300
+}
+
+.authForm-input {
+    @apply px-2 py-1 text-sm border-b border-gray-400 focus:border-red-500 outline-none w-full;
+    @apply md:px-3 py-3 md:text-base w-full;
+    @apply xl:px-3 py-3 xl:text-lg w-full;
+
+}
+
+.authForm-btn {
+    @apply bg-red-500 text-white rounded hover:bg-red-600 transition-all duration-300;
+    /* default */
+    @apply font-medium;
+    /* tablet */
+    @apply px-6 py-3 text-sm sm:px-8 sm:py-2 sm:text-base;
+    /* laptop */
+    @apply md:px-12 md:py-3 md:text-lg;
+}
+
+.authForm-link {
+    @apply text-sm text-red-500 hover:text-red-700;
+    @apply md:text-2xl;
+    @apply lg:text-lg;
+}
+
+.authForm-google {
+    @apply flex px-12 py-3 items-center justify-center border border-gray-300 rounded-md hover:bg-gray-100 transition duration-300;
+    @apply flex px-12 py-3 items-center justify-center border border-gray-300 rounded-md hover:bg-gray-100 transition duration-300;
+    @apply flex px-12 py-3 items-center justify-center border border-gray-300 rounded-md hover:bg-gray-100 transition duration-300;
+    @apply flex px-12 py-3 items-center justify-center border border-gray-300 rounded-md hover:bg-gray-100 transition duration-300;
+}
+
+.authForm-img {
+    @apply w-full;
+    @apply hidden;
+    @apply md:hidden;
+    @apply lg:block lg:h-full;
+}
+
+.authForm-link2 {
+    @apply mx-2 underline underline-offset-4 hover:text-red-400 transition-all duration-300;
+    @apply md:text-2xl;
+    @apply lg:text-lg;
+}

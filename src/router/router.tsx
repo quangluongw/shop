@@ -3,13 +3,13 @@ import {
     createBrowserRouter,
 } from "react-router-dom";
 import Layoutcline from "../layout/layoutcline";
-import Home from "../pages/Home";
+import Signup from "../pages/client/Signup";
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <Layoutcline />,
         children: [{
-            index: true, element: <Home />
+            path: "signup", element: <Signup />
         }]
     }
 ])
