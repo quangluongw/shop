@@ -1,26 +1,24 @@
-import InputField from "../../components/common/InputField";
 import "../../css/form.css";
 
 const Signup = () => {
   return (
-    <div className="flex md:flex-row flex-col min-h-[100vh] py-10 gap-2">
+    <div className="flex h-full">
       {/* ảnh */}
-      <div className="laptop:block hidden f-ull md:w-1/2 ">
+      <div className="w-1/2">
         <img
-          className="authForm-img h-full "
+          className="authForm-img"
           src="https://houseofcambridge.co.uk/img/SideImage.png"
         />
       </div>
-      <InputField   />
 
       {/* form đăng ký */}
-      <div className="w-full laptop:w-1/2 flex items-center justify-center">
-        <div className="w-full max-w-md px-8 flex flex-col gap-5 md:gap-10">
+      <div className="w-1/2 flex items-center justify-center">
+        <div className="w-full max-w-md px-8">
           <div className="flex flex-col gap-4">
-            <h2 className="text-3xl md:text-4xl md:text-left text-center font-semibold tracking-wider text-black">
+            <h2 className="text-4xl font-semibold tracking-wider text-black">
               Create an account
             </h2>
-            <p className="text-center text-lg text-gray-600">
+            <p className="mb-10 text-lg text-gray-600">
               Enter your details below
             </p>
           </div>
