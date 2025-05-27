@@ -1,16 +1,46 @@
 .container {
-    margin: 0 auto;
-    padding: 0;
-    max-width: 1200px;
-    border: 1px solid black;
-}
-
-.container {
     max-width: 1200px;
     margin: 10px auto;
 }
 
+.ratingStar {
+    @apply size-3 stroke-yellow-300 fill-yellow-300;
+    @apply xl:size-4;
+}
 
-.vertical-menu {
-    @apply hover:text-black cursor-pointer
-} 
+
+.headingMark {
+    @apply w-4 h-7 bg-red-600 rounded;
+    @apply w-3 h-5;
+}
+
+.headingText {
+    @apply font-semibold text-sm text-red-600;
+    @apply xl:text-base;
+
+}
+
+
+/* product card */
+.productBagde {
+    @apply text-white text-[0.4rem] desktop:text-xs text-center p-0 desktop:p-2 rounded
+}
+
+.productSideBtn {
+    @apply relative bg-white size-7 rounded-full hover:bg-red-500 cursor-pointer hover:text-white transition-all duration-300;
+}
+
+
+/* product detail */
+
+.quantityInput {
+    @apply w-16 h-8 text-center border-y border-black  focus:outline-none focus:border-red-500;
+}
+.quantityBtn { 
+    @apply w-8 h-8 text-center border border-black hover:bg-red-500 hover:text-white hover:border-red-500 cursor-pointer transition-all duration-300;
+}
+
+
+
+
+
