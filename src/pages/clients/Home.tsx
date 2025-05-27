@@ -1,47 +1,39 @@
-import {
-  Box,
-  Eye,
-  HandCoins,
-  Headphones,
-  Heart,
-  MoveLeft,
-  MoveRight,
-  Smartphone,
-  Star,
-} from "lucide-react";
+import { Eye, Heart, MoveLeft, MoveRight, Star } from "lucide-react";
 import "../../css/style.css";
+import PolicyCard from "../../components/common/PolicyCard";
+
 const Home = () => {
   return (
-    <div className="container">
-      <div className="flex justify-center items-center py-10 ">
-        <div className="w-1/4 mr-10">
-          <ul className="space-y-3 text-gray-600 font-semibold text-lg border-r-2 h-full">
-            <li className="vertical-menu">Thời trang nữ</li>
-            <li className="vertical-menu">Thời trang nam</li>
-            <li className="vertical-menu">Đồ điện tử</li>
-            <li className="vertical-menu">Nhà & đời sống</li>
-            <li className="vertical-menu">Y tế</li>
-            <li className="vertical-menu">Trẻ em</li>
-            <li className="vertical-menu">Bách hoá & thú cưng</li>
-            <li className="vertical-menu">Sức khoẻ và sắc đẹp</li>
-          </ul>
+    <div className="container p-5">
+      <div className="flex flex-col tablet:flex-row xl:flex-row items-center gap-6 mb-10">
+        <div className="vertical-menu-layout">
+          <a className="vertical-menu">Thời trang nữ</a>
+          <a className="vertical-menu">Thời trang nam</a>
+          <a className="vertical-menu">Đồ điện tử</a>
+          <a className="vertical-menu">Nhà & đời sống</a>
+          <a className="vertical-menu">Y tế</a>
+          <a className="vertical-menu">Trẻ em</a>
+          <a className="vertical-menu">Bách hoá & thú cưng</a>
+          <a className="vertical-menu">Sức khoẻ và sắc đẹp</a>
         </div>
-        <div className="flex justify-center w-full">
-          <div className="relative  min-w-[900px] shadow-lg">
+        <div className="flex justify-center h-full  w-full">
+          <div className="relative shadow-lg w-full tablet:h-[20vh] laptop:h-[30vh] desktop:h-[30vh]">
             <img
               src="https://cdn.shopify.com/s/files/1/0808/0067/files/category_banner_ip14pro_promax_desktop_1.jpg?v=1662594151"
               alt="top banner"
-              className="w-full object-cover"
+              className="h-full w-full rounded-lg  object-fill"
             />
-            <div className="absolute inset-0 flex flex-col justify-center items-start px-20">
-              <h2 className="text-xl font-semibold mb-10">Nothing series 2</h2>
-              <p className="text-3xl font-bold mb-4">
+            <div className="absolute -inset-12  xl:inset-0 gap-2 xl:gap-4 flex flex-col justify-center px-20">
+              <h2 className="text-[0.5rem] xl:text-xl font-semibold">
+                Nothing series 2
+              </h2>
+              <p className="text-xs xl:text-3xl font-bold ">
                 Khuyến mãi <br />
                 lên đến 10%
               </p>
               <a
                 href="#"
-                className="inline-block font-medium hover:text-red-600 transition-all duration-300"
+                className="text-[0.5rem] xl:text-base font-medium hover:text-red-600 transition-all duration-300"
               >
                 Xem ngay →
               </a>
@@ -52,30 +44,30 @@ const Home = () => {
 
       <div>
         <div className="flex items-center gap-2 mb-5">
-          <div className="w-4 h-7 bg-red-600 rounded"></div>
-          <h2 className="font-semibold text-red-600">Hôm nay</h2>
+          <div className="headingMark"></div>
+          <h2 className="headingText">Hôm nay</h2>
         </div>
-        <div className="flex justify-between">
+        <div className="flex desktop:justify-between">
           {/* đếm ngược */}
-          <div className="flex gap-4">
-            <h3 className="text-3xl font-semibold pr-10">Flash sales</h3>
+          <div className="flex gap-2 desktop:gap-4">
+            <h3 className="headline">Flash sales</h3>
             <div className="text-center">
-              <p className="text-3xl font-bold">23</p>
-              <p className="text-sm">Tiếng</p>
+              <p className="saleTimer">23</p>
+              <p className="saleTimerUnit">Tiếng</p>
             </div>
-            <span className="text-3xl font-semibold text-red-500">:</span>
+            <span className="timerDot">:</span>
             <div className="text-center">
-              <p className="text-3xl font-bold">23</p>
-              <p className="text-sm">Phút</p>
+              <p className="saleTimer">23</p>
+              <p className="saleTimerUnit">Phút</p>
             </div>
-            <span className="text-3xl font-semibold text-red-500">:</span>
+            <span className="timerDot">:</span>
             <div className="text-center">
-              <p className="text-3xl font-bold">23</p>
-              <p className="text-sm">Giây</p>
+              <p className="saleTimer">23</p>
+              <p className="saleTimerUnit">Giây</p>
             </div>
           </div>
 
-          <div className="flex gap-2 pt-1">
+          <div className="hidden xl:flex gap-2 pt-1">
             <div className="relative bg-gray-200 size-7 rounded-full hover:bg-gray-400 cursor-pointer transition-all duration-300">
               <MoveLeft className="size-5 absolute inset-1" />
             </div>
@@ -87,112 +79,67 @@ const Home = () => {
       </div>
       {/* sản phẩm */}
       <div className="mt-10 flex justify-start gap-4">
-        <div className="flex flex-col w-1/5  transition-all duration-300 rounded relative group overflow-hidden">
+        <div className="flex flex-col w-1/5 transition-all duration-300 rounded relative group overflow-hidden">
           <div className="relative">
             <img
               src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxkHrD6T3YE0CUHIJFuyDNM3YoeCnk988ZJw&s"
               alt="HAVIT HV-G92 Gamepad"
-              className="w-full h-auto rounded "
+              className="w-full h-full rounded "
             />
             <div>
-              <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-2 rounded">
-                -40%
-              </span>
-              <span className="absolute top-12 left-2 bg-green-500 text-white text-xs px-2 py-2 rounded ">
-                NEW
-              </span>
-              <div className="absolute top-2 right-2">
-                <div className="relative bg-white size-7 rounded-full hover:bg-red-500 cursor-pointer hover:text-white transition-all duration-300">
+              <div className="flex flex-col absolute top-0 gap-1 xl:gap-2">
+                <span className="bg-red-500 productBagde">-40%</span>
+                <span className="bg-green-500 productBagde ">NEW</span>
+              </div>
+              <div className="hidden desktop:block absolute top-2 right-2">
+                <div className="productSideBtn">
                   <Heart className="size-5 absolute inset-1" />
                 </div>
-                <div className="relative bg-white size-7 rounded-full hover:bg-red-500 hover:text-white cursor-pointer transition-all duration-300 mt-1">
+                <div className="productSideBtn mt-1">
                   <Eye className="size-5 absolute inset-1" />
                 </div>
               </div>
             </div>
             <div className="absolute w-full -bottom-1 opacity-0 group-hover:bottom-0  group-hover:opacity-100 transition-all duration-300 ">
-              <button className="w-full bg-black py-2 rounded-b-sm text-white">
+              <button className="w-full bg-black text-[0.5rem] xl:text-base desktop:py-2 rounded-b-sm text-white">
                 Thêm vào giỏ
               </button>
             </div>
           </div>
 
           <div className="my-3 text-black font-semibold">
-            <p>HAVIT HV-G92 Gamepad</p>
+            <a href="">
+              <p className="text-[0.5rem] xl:text-base hover:text-red-500 transition-all duration-300">
+                HAVIT HV-G92 Gamepad
+              </p>
+            </a>
           </div>
 
-          <div className="flex gap-3">
-            <p className="text-red-500 font-semibold text-base">$123</p>
-            <p className="text-gray-400 line-through font-semibold text-base">
-              $123
-            </p>
-          </div>
-          <div className="flex mt-3">
-            <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-            <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-            <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-            <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-            <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-            <span className="text-sm pl-2 text-gray-500 font-semibold">
-              (88)
-            </span>
-          </div>
-        </div>
-        <div className="flex flex-col w-1/5 shadow-sm hover:shadow-lg transition-all duration-300 rounded relative group overflow-hidden">
-          <div className="relative">
-            <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxkHrD6T3YE0CUHIJFuyDNM3YoeCnk988ZJw&s"
-              alt="HAVIT HV-G92 Gamepad"
-              className="w-full h-auto rounded "
-            />
-            <div>
-              <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-2 rounded ">
-                -40%
-              </span>
-              <span className="absolute top-12 left-2 bg-green-500 text-white text-xs px-2 py-2 rounded ">
-                NEW
-              </span>
-              <div className="absolute top-2 right-2">
-                <div className="relative bg-white size-7 rounded-full hover:bg-red-500 cursor-pointer hover:text-white transition-all duration-300">
-                  <Heart className="size-5 absolute inset-1" />
-                </div>
-                <div className="relative bg-white size-7 rounded-full hover:bg-red-500 hover:text-white cursor-pointer transition-all duration-300 mt-1">
-                  <Eye className="size-5 absolute inset-1" />
-                </div>
-              </div>
+          <div className="flex flex-col gap-3">
+            <div className="flex gap-2">
+              <p className="text-red-500 font-semibold text-[0.6rem] xl:text-base">
+                $123
+              </p>
+              <p className="text-gray-400 line-through font-semibold text-[0.6rem] xl:text-base">
+                $223
+              </p>
             </div>
-            <div className="absolute w-full -bottom-1 opacity-0 group-hover:bottom-0  group-hover:opacity-100 transition-all duration-300 ">
-              <button className="w-full bg-black rounded-b-sm py-2 text-white">
-                Thêm vào giỏ
-              </button>
+            <div className="flex items-center">
+              <Star className="ratingStar" />
+              <Star className="ratingStar" />
+              <Star className="ratingStar" />
+              <Star className="ratingStar" />
+              <Star className="ratingStar" />
+              <span className="text-[0.6rem] xl:text-sm pl-2 text-gray-500 font-semibold">
+                (88)
+              </span>
             </div>
-          </div>
-
-          <div className="my-3 text-black font-semibold">
-            <p>HAVIT HV-G92 Gamepad</p>
-          </div>
-
-          <div className="flex gap-3">
-            <p className="text-red-500 font-semibold text-base">$123</p>
-            <p className="text-gray-400 line-through font-semibold text-base">
-              $123
-            </p>
-          </div>
-          <div className="flex mt-3">
-            <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-            <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-            <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-            <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-            <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-            <span className="text-sm pl-2 text-gray-500 font-semibold">
-              (88)
-            </span>
           </div>
         </div>
       </div>
       <div className="flex justify-center w-full mt-10 ">
         <a href="">
-          <button className="text-white border border-white bg-red-500 px-4 py-3 rounded hover:bg-white hover:text-red-500 hover:border-red-500 transition-all duration-300">
+          <button className="text-white border border-white bg-red-500 px-2 py-1 text-sm xl:text-base xl:px-4 xl:py-3 rounded hover:bg-white hover:text-red-500 hover:border-red-500 transition-all duration-300">
             Xem thêm sản phẩm
           </button>
         </a>
@@ -201,62 +148,21 @@ const Home = () => {
       {/* lọc theo danh mục */}
       <div>
         <div className="flex items-center gap-2 mb-5">
-          <div className="w-4 h-7 bg-red-600 rounded"></div>
-          <h2 className="font-semibold text-red-600">Tìm theo danh mục</h2>
+          <div className="headingMark"></div>
+          <h2 className="headingText">Tìm theo danh mục</h2>
         </div>
 
         <div className="flex w-full justify-between gap-4 ">
-          <div className="flex flex-col border-2 border-gray-300 hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-200 cursor-pointer rounded gap-4 p-10 mb-10">
+          <div className="flex flex-col shadow-lg group cursor-pointer rounded-lg p-5 tablet:px-10 tablet:py-8 xl:px-12 xl:py-8 mb-10">
             <a href="">
-              <Smartphone className="h-10 w-full" />
-              <span className="w-full text-center text-lg font-semibold">
+              <img
+                src="https://png.pngtree.com/png-clipart/20230206/ourmid/pngtree-cell-phone-mockup-png-image_6584021.png"
+                alt="phone"
+                className="size-10 xl:size-24 group-hover:scale-125 transition-all duration-300 mx-auto"
+              />
+              <p className="w-full text-center text-sm xl:text-lg font-semibold mt-5">
                 Điện thoại
-              </span>
-            </a>
-          </div>
-
-          <div className="flex flex-col border-2 border-gray-300 hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-200 cursor-pointer rounded gap-4 p-10 mb-10">
-            <a href="">
-              <Smartphone className="h-10 w-full" />
-              <span className="w-full text-center text-lg font-semibold">
-                Điện thoại
-              </span>
-            </a>
-          </div>
-
-          <div className="flex flex-col border-2 border-gray-300 hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-200 cursor-pointer rounded gap-4 p-10 mb-10">
-            <a href="">
-              <Smartphone className="h-10 w-full" />
-              <span className="w-full text-center text-lg font-semibold">
-                Điện thoại
-              </span>
-            </a>
-          </div>
-
-          <div className="flex flex-col border-2 border-gray-300 hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-200 cursor-pointer rounded gap-4 p-10 mb-10">
-            <a href="">
-              <Smartphone className="h-10 w-full" />
-              <span className="w-full text-center text-lg font-semibold">
-                Điện thoại
-              </span>
-            </a>
-          </div>
-
-          <div className="flex flex-col border-2 border-gray-300 hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-200 cursor-pointer rounded gap-4 p-10 mb-10">
-            <a href="">
-              <Smartphone className="h-10 w-full" />
-              <span className="w-full text-center text-lg font-semibold">
-                Điện thoại
-              </span>
-            </a>
-          </div>
-
-          <div className="flex flex-col border-2 border-gray-300 hover:bg-red-500 hover:text-white hover:border-red-500 transition-all duration-200 cursor-pointer rounded gap-4 p-10 mb-10">
-            <a href="">
-              <Smartphone className="h-10 w-full" />
-              <span className="w-full text-center text-lg font-semibold">
-                Điện thoại
-              </span>
+              </p>
             </a>
           </div>
         </div>
@@ -265,72 +171,79 @@ const Home = () => {
       {/* bán chạy */}
       <div>
         <div className="flex items-center gap-2 mb-5">
-          <div className="w-4 h-7 bg-red-600 rounded"></div>
-          <h2 className="font-semibold text-red-600">Tháng này</h2>
+          <div className="headingMark"></div>
+          <h2 className="headingText">Tháng này</h2>
         </div>
 
         <div className="flex justify-between">
-          <h3 className="text-3xl font-semibold pr-10">Sản phẩm bán chạy</h3>
-          <button className="text-white  border border-white bg-red-500 rounded px-8 py-3 hover:bg-white hover:text-red-500 hover:border-red-500  transition-all duration-300">
+          <h3 className="headline">Sản phẩm bán chạy</h3>
+          <button className="text-white  border border-white bg-red-500 text-sm xl:text-base rounded px-3 py-1 xl:px-8 xl:py-3 hover:bg-white hover:text-red-500 hover:border-red-500  transition-all duration-300">
             Xem thêm
           </button>
         </div>
         {/* Danh sách sản phẩm bán chạy*/}
-        <div className="mt-10">
-          <div className="flex flex-col w-1/5 transition-all duration-300 rounded relative group overflow-hidden">
-            <div className="relative">
-              <img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxkHrD6T3YE0CUHIJFuyDNM3YoeCnk988ZJw&s"
-                alt="HAVIT HV-G92 Gamepad"
-                className="w-full h-auto rounded "
-              />
-              <div>
-                <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-2 rounded">
-                  -40%
-                </span>
-                <span className="absolute top-12 left-2 bg-green-500 text-white text-xs px-2 py-2 rounded ">
-                  NEW
-                </span>
-                <div className="absolute top-2 right-2">
-                  <div className="relative bg-white size-7 rounded-full hover:bg-red-500 cursor-pointer hover:text-white transition-all duration-300">
-                    <Heart className="size-5 absolute inset-1" />
+        <div>
+          <div className="mt-10 flex justify-start gap-4">
+            <div className="flex flex-col w-1/5 transition-all duration-300 rounded relative group overflow-hidden">
+              <div className="relative">
+                <img
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxkHrD6T3YE0CUHIJFuyDNM3YoeCnk988ZJw&s"
+                  alt="HAVIT HV-G92 Gamepad"
+                  className="w-full h-full rounded "
+                />
+                <div>
+                  <div className="flex flex-col absolute top-0 gap-1 xl:gap-2">
+                    <span className="bg-red-500 productBagde">-40%</span>
+                    <span className="bg-green-500 productBagde ">NEW</span>
                   </div>
-                  <div className="relative bg-white size-7 rounded-full hover:bg-red-500 hover:text-white cursor-pointer transition-all duration-300 mt-1">
-                    <Eye className="size-5 absolute inset-1" />
+                  <div className="hidden desktop:block absolute top-2 right-2">
+                    <div className="productSideBtn">
+                      <Heart className="size-5 absolute inset-1" />
+                    </div>
+                    <div className="productSideBtn mt-1">
+                      <Eye className="size-5 absolute inset-1" />
+                    </div>
                   </div>
                 </div>
+                <div className="absolute w-full -bottom-1 opacity-0 group-hover:bottom-0  group-hover:opacity-100 transition-all duration-300 ">
+                  <button className="w-full bg-black text-[0.5rem] xl:text-base desktop:py-2 rounded-b-sm text-white">
+                    Thêm vào giỏ
+                  </button>
+                </div>
               </div>
-              <div className="absolute w-full -bottom-1 opacity-0 group-hover:bottom-0  group-hover:opacity-100 transition-all duration-300 ">
-                <button className="w-full bg-black py-2 rounded-b-sm text-white">
-                  Thêm vào giỏ
-                </button>
+
+              <div className="my-3 text-black font-semibold">
+                <a href="">
+                  <p className="text-[0.5rem] xl:text-base hover:text-red-500 transition-all duration-300">
+                    HAVIT HV-G92 Gamepad
+                  </p>
+                </a>
               </div>
-            </div>
 
-            <div className="my-3 text-black font-semibold">
-              <p>HAVIT HV-G92 Gamepad</p>
-            </div>
-
-            <div className="flex gap-3">
-              <p className="text-red-500 font-semibold text-base">$123</p>
-              <p className="text-gray-400 line-through font-semibold text-base">
-                $123
-              </p>
-            </div>
-            <div className="flex mt-3">
-              <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-              <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-              <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-              <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-              <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-              <span className="text-sm pl-2 text-gray-500 font-semibold">
-                (88)
-              </span>
+              <div className="flex flex-col gap-3">
+                <div className="flex gap-2">
+                  <p className="text-red-500 font-semibold text-[0.6rem] xl:text-base">
+                    $123
+                  </p>
+                  <p className="text-gray-400 line-through font-semibold text-[0.6rem] xl:text-base">
+                    $223
+                  </p>
+                </div>
+                <div className="flex items-center">
+                  <Star className="ratingStar" />
+                  <Star className="ratingStar" />
+                  <Star className="ratingStar" />
+                  <Star className="ratingStar" />
+                  <Star className="ratingStar" />
+                  <span className="text-[0.6rem] xl:text-sm pl-2 text-gray-500 font-semibold">
+                    (88)
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
       {/* Banner 2 */}
       <div className="relative my-20">
         <img
@@ -338,56 +251,54 @@ const Home = () => {
           alt="JBL speaker"
         />
         <div className="absolute inset-0 bg-black opacity-25"></div>
-        <div className="absolute text-green-400 top-10 left-20">
-          <p className="font-bold">Loa nghe nhạc</p>
-          <p className=" text-white mt-10 text-3xl font-bold">
-            Nâng tầm trải nghiệm
-            <br /> nghe nhạc của bạn
-          </p>
-        </div>
-        <div className="absolute flex gap-4 left-20 top-[220px]">
-          <div className="bg-white size-12  flex flex-col text-center rounded-full">
-            <div className="font-bold">23</div>
-            <div className="text-xs ">Ngày</div>
+        <div className="bannerLayout">
+          <div className=" text-green-400 flex flex-col gap-1 tablet:gap-2 desktop:gap-6">
+            <p className="font-semibold text-[0.5rem] tablet:text-xl desktop:text-2xl">
+              Loa JBL
+            </p>
+            <p className=" text-white text-[0.6rem] tablet:text-2xl desktop:text-3xl font-bold">
+              Nâng tầm trải nghiệm nghe nhạc của bạn
+            </p>
           </div>
-          <div className="bg-white size-12  flex flex-col text-center rounded-full">
-            <div className="font-bold">23</div>
-            <div className="text-xs ">Giờ</div>
+          <div className=" flex gap-1 tablet:gap-3 desktop:gap-4">
+            <div className="countBackground">
+              <span className="countTime">23</span>
+              <span className="countUnit ">Ngày</span>
+            </div>
+            <div className="countBackground">
+              <span className="countTime">23</span>
+              <span className="countUnit ">Giờ</span>
+            </div>
+            <div className="countBackground">
+              <span className="countTime">23</span>
+              <span className="countUnit ">Phút</span>
+            </div>
+            <div className="countBackground">
+              <span className="countTime">23</span>
+              <span className="countUnit">Giây</span>
+            </div>
           </div>
-          <div className="bg-white size-12  flex flex-col text-center rounded-full">
-            <div className="font-bold">23</div>
-            <div className="text-xs ">Phút</div>
+          <div>
+            <a href="">
+              <button className="bannerButton">Mua ngay</button>
+            </a>
           </div>
-          <div className="bg-white size-12  flex flex-col text-center rounded-full">
-            <div className="font-bold">23</div>
-            <div className="text-xs ">Giây</div>
-          </div>
-        </div>
-
-        <div className="absolute left-20 top-[300px]">
-          <a href="">
-            <button className="bg-green-400 px-5 py-3 rounded text-white hover:bg-green-500 transition-all duration-300">
-              Mua ngay
-            </button>
-          </a>
         </div>
       </div>
 
       {/* khám phá thêm sản phẩm */}
       <div>
         <div className="flex items-center gap-2 mb-5">
-          <div className="w-4 h-7 bg-red-600 rounded"></div>
-          <h2 className="font-semibold text-red-600">Sản phẩm của chúng tôi</h2>
+          <div className="headingMark"></div>
+          <h2 className="headingText">Sản phẩm của chúng tôi</h2>
         </div>
         <div className="flex justify-between">
           {/* đếm ngược */}
           <div className="flex gap-4">
-            <h3 className="text-3xl font-semibold pr-10">
-              Khám phá thêm sản phẩm
-            </h3>
+            <h3 className="headline">Khám phá thêm sản phẩm</h3>
           </div>
 
-          <div className="flex gap-2 pt-1">
+          <div className="hidden desktop:flex gap-2 pt-1">
             <div className="relative bg-gray-200 size-7 rounded-full hover:bg-gray-400 cursor-pointer transition-all duration-300">
               <MoveLeft className="size-5 absolute inset-1" />
             </div>
@@ -400,68 +311,67 @@ const Home = () => {
 
       <div>
         <div className="mt-10 flex justify-start gap-4">
-          <div className="flex flex-col w-1/5  transition-all duration-300 rounded relative group overflow-hidden">
+          <div className="flex flex-col w-1/5 transition-all duration-300 rounded relative group overflow-hidden">
             <div className="relative">
               <img
                 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxkHrD6T3YE0CUHIJFuyDNM3YoeCnk988ZJw&s"
                 alt="HAVIT HV-G92 Gamepad"
-                className="w-full h-auto rounded "
+                className="w-full h-full rounded "
               />
               <div>
-                <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-2 rounded">
-                  -40%
-                </span>
-                <span className="absolute top-12 left-2 bg-green-500 text-white text-xs px-2 py-2 rounded ">
-                  NEW
-                </span>
-                <div className="absolute top-2 right-2">
-                  <div className="relative bg-white size-7 rounded-full hover:bg-red-500 cursor-pointer hover:text-white transition-all duration-300">
+                <div className="flex flex-col absolute top-0 gap-1 xl:gap-2">
+                  <span className="bg-red-500 productBagde">-40%</span>
+                  <span className="bg-green-500 productBagde ">NEW</span>
+                </div>
+                <div className="hidden desktop:block absolute top-2 right-2">
+                  <div className="productSideBtn">
                     <Heart className="size-5 absolute inset-1" />
                   </div>
-                  <div className="relative bg-white size-7 rounded-full hover:bg-red-500 hover:text-white cursor-pointer transition-all duration-300 mt-1">
+                  <div className="productSideBtn mt-1">
                     <Eye className="size-5 absolute inset-1" />
                   </div>
                 </div>
               </div>
               <div className="absolute w-full -bottom-1 opacity-0 group-hover:bottom-0  group-hover:opacity-100 transition-all duration-300 ">
-                <button className="w-full bg-black py-2 rounded-b-sm text-white">
+                <button className="w-full bg-black text-[0.5rem] xl:text-base desktop:py-2 rounded-b-sm text-white">
                   Thêm vào giỏ
                 </button>
               </div>
             </div>
 
             <div className="my-3 text-black font-semibold">
-              <p>HAVIT HV-G92 Gamepad</p>
+              <a href="">
+                <p className="text-[0.5rem] xl:text-base hover:text-red-500 transition-all duration-300">
+                  HAVIT HV-G92 Gamepad
+                </p>
+              </a>
             </div>
 
-            <div className="flex gap-3">
-              <p className="text-red-500 font-semibold text-base">$123</p>
+            <div className="flex flex-col gap-3">
+              <div className="flex gap-2">
+                <p className="text-red-500 font-semibold text-[0.6rem] xl:text-base">
+                  $123
+                </p>
+                <p className="text-gray-400 line-through font-semibold text-[0.6rem] xl:text-base">
+                  $223
+                </p>
+              </div>
               <div className="flex items-center">
-                <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-                <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-                <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-                <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-                <Star className="size-4 stroke-yellow-300 fill-yellow-300" />
-                <span className="text-sm pl-2 text-gray-500 font-semibold">
+                <Star className="ratingStar" />
+                <Star className="ratingStar" />
+                <Star className="ratingStar" />
+                <Star className="ratingStar" />
+                <Star className="ratingStar" />
+                <span className="text-[0.6rem] xl:text-sm pl-2 text-gray-500 font-semibold">
                   (88)
                 </span>
               </div>
-            </div>
-            <div className="flex gap-2">
-              <div
-                tabIndex={0}
-                className="bg-red-600 size-4 rounded-full mt-3 hover:border-[1px] hover:border-black cursor-pointer focus:border-[1px] focus:border-black"
-              ></div>
-              <div
-                tabIndex={0}
-                className="bg-yellow-400 size-4 rounded-full mt-3 hover:border-[1px] hover:border-black cursor-pointer focus:border-[1px] focus:border-black"
-              ></div>
             </div>
           </div>
         </div>
         <div className="flex justify-center my-5">
           <a href="">
-            <button className="text-white border border-white bg-red-500 px-4 py-3 rounded hover:bg-white hover:text-red-500 hover:border-red-500 transition-all duration-300">
+            <button className="text-white border border-white bg-red-500 px-2 py-1 text-sm xl:text-base xl:px-4 xl:py-3 rounded hover:bg-white hover:text-red-500 hover:border-red-500 transition-all duration-300">
               Xem thêm sản phẩm
             </button>
           </a>
@@ -471,16 +381,15 @@ const Home = () => {
       {/* Bài viết */}
       <div>
         <div className="flex items-center gap-2 mb-5">
-          <div className="w-4 h-7 bg-red-600 rounded"></div>
-          <h2 className="font-semibold text-red-600">Bài viết</h2>
+          <div className="headingMark"></div>
+          <h2 className="headingText">Bài viết</h2>
         </div>
         <div className="flex justify-between">
-          {/* đếm ngược */}
           <div className="flex gap-4">
-            <h3 className="text-3xl font-semibold pr-10">Sản phẩm mới về</h3>
+            <h3 className="headline">Sản phẩm mới về</h3>
           </div>
 
-          <div className="flex gap-2 pt-1">
+          <div className="hidden desktop:flex gap-2 pt-1">
             <div className="relative bg-gray-200 size-7 rounded-full hover:bg-gray-400 cursor-pointer transition-all duration-300">
               <MoveLeft className="size-5 absolute inset-1" />
             </div>
@@ -489,42 +398,37 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <div className="grid grid-cols-4 gap-1 desktop:gap-4 my-10">
+          <div className="bg-black text-white col-span-2 row-span-2">
+            <img
+              src="https://pioneeroutlook.org/wp-content/uploads/2021/02/PlayStation-5.jpg"
+              alt="ps5"
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+          <div className="bg-black text-white col-span-2">
+            <img
+              src="https://www.instyle.com/thmb/mN9rNRNVJ3-lyxlpjfHtQt2gU2o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ins-product-dior-sauvage-elixir-jthompson-0154-90d9082ed876474b864b09e94c9e86f5.jpeg"
+              alt="colone"
+            />
+          </div>
+          <div className="bg-black text-white">
+            <img
+              src="https://c4.wallpaperflare.com/wallpaper/155/704/990/acoustics-wood-light-dynamics-wallpaper-preview.jpg"
+              alt="speaker"
+            />
+          </div>
+          <div className="bg-black text-white">
+            <img
+              src="https://www.shutterstock.com/image-photo/amsterdam-netherlands-10-31-2023-600nw-2382190717.jpg"
+              alt="pefume"
+            />
+          </div>
+        </div>
       </div>
-
-      <div></div>
 
       {/* chính sách */}
-      <div className="flex justify-around my-10">
-        <div>
-          <div className="bg-black border-[2px] border-gray-400 text-white rounded-full w-14 mx-auto my-4">
-            <Box className="size-[3.3rem]" />
-          </div>
-          <div className="w-full text-center">
-            <p className="font-bold text-xl">Miễn phí và nhanh chóng</p>
-            <span className="text-sm">
-              Miễn phí vận chuyển cho mọi đơn trên 500 nghìn
-            </span>
-          </div>
-        </div>
-        <div>
-          <div className="bg-black border-[2px] border-gray-400 text-white rounded-full w-14 mx-auto my-4">
-            <Headphones className="size-[3.3rem]" />
-          </div>
-          <div className="w-full text-center">
-            <p className="font-bold text-xl">Hỗ trợ 24/7</p>
-            <span className="text-sm">Luôn sẵn sàng hỗ trợ khách hàng</span>
-          </div>
-        </div>
-        <div>
-          <div className="bg-black border-[2px] border-gray-400 text-white rounded-full w-14 mx-auto my-4">
-            <HandCoins className="size-[3.3rem]"/>
-          </div>
-          <div className="w-full text-center">
-            <p className="font-bold text-xl">Hoàn trả nhanh chóng</p>
-            <span className="text-sm">Hoàn tiền chỉ trong 30 ngày</span>
-          </div>
-        </div>
-      </div>
+      <PolicyCard />
     </div>
   );
 };
