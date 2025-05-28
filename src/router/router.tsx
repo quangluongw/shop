@@ -1,4 +1,4 @@
-import {  createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Layoutcline from "../layout/layoutcline";
 import Cart from "../pages/Cart/Cart";
 import CheckOut from "../pages/Check Out/CheckOut";
@@ -33,4 +33,3 @@ export const router = createBrowserRouter([
     ],
   },
 ]);
-
